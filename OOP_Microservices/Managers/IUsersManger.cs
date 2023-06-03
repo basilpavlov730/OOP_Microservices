@@ -8,5 +8,6 @@ namespace OOP_Microservices.Managers
         Task<UserDto> GetById(int id);
         Task<UserDto> CreateUser(CreateUserRequest createUserRequest);
         Task<UserDto> UpdateUser(int id, UpdateUserRequest updateUserRequest);
+        Task DeleteUser(int id);
     }
 }

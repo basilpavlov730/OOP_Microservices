@@ -57,5 +57,13 @@ namespace OOP_Microservices.Managers
                 return null;
             }
         }
+
+        public async Task DeleteUser(int id)
+        {
+            var user = await _dbContext.Users.FirstOrDefaultAsync(x => x.Id == id);
+            _dbContext.Users.Remove(user);
+
+            await _dbContext.SaveChangesAsync();
+        }
     }
 }

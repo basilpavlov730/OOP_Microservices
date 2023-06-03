@@ -53,5 +53,12 @@ namespace OOP_Microservices.Controllers
             return await _usersManger.UpdateUser(Id, request);
         }
 
+        // Метод Delete используетс для удаления записей
+        [HttpDelete("{Id:int}")]
+        public async Task DeleteUser(int Id)
+        {
+            await _usersManger.DeleteUser(Id);
+        }
+
     }
 }

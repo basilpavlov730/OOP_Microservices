@@ -41,5 +41,10 @@ namespace OOP_Microservices.Managers
 
             return await result.Content.ReadFromJsonAsync<UserDto>();
         }
+
+        public async Task DeleteUser(int id)
+        {
+            await _httpClient.DeleteAsync($"/api/Users/{id}");
+        }
     }
 }

@@ -39,5 +39,11 @@ namespace OOP_DatabaseMicroserice.Controllers
         {
             return await _usersManger.UpdateUser(Id, request);
         }
+
+        [HttpDelete("{Id:int}")]
+        public async Task DeleteUser(int Id)
+        {
+            await _usersManger.DeleteUser(Id);
+        }
     }
 }
